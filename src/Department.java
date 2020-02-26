@@ -77,29 +77,27 @@ public class Department extends OrganizationStructure {
         return structure;
     }
 
-//    @Override
-//    public List <OrganizationStructure> sortByProfession() {
-////        structure.sort(new ProfessionSorter());
-//
-//        Iterator iterator = structure.iterator();
-//        while (iterator.hasNext()){
-//            OrganizationStructure organizationStructure = (OrganizationStructure) iterator.next();
-//            System.out.println("111111111111111111"+ organizationStructure);
-//            if (organizationStructure.getProfession()!=null) {
-//                organizationStructure.getList().sort(new ProfessionSorter());
-//            }
-//
-//            if (organizationStructure instanceof Department){
-//            Iterator iterator2 = organizationStructure.getList().iterator();
-//            while (iterator2.hasNext()) {
-//                OrganizationStructure organizationStructure2 = (OrganizationStructure) iterator2.next();
-//                if (organizationStructure2.getProfession()!=null && organizationStructure2.getList()!=null) {
-//                    System.out.println("22222222222222"+ organizationStructure);
-//                    organizationStructure2.getList().sort(new ProfessionSorter());
-//                }
-//            }
-//            }
-//        }
-//        return structure;
-//    }
+    @Override
+    public List <OrganizationStructure> sortByProfession() {
+//        structure.sort(new ProfessionSorter());
+
+        Iterator iterator = structure.iterator();
+        while (iterator.hasNext()){
+            OrganizationStructure organizationStructure = (OrganizationStructure) iterator.next();
+            System.out.println("111111111111111111"+ organizationStructure);
+
+            if (organizationStructure instanceof Department){
+            Iterator iterator2 = organizationStructure.getList().iterator();
+                System.out.println("????????????????????????");
+            while (iterator2.hasNext()) {
+                OrganizationStructure organizationStructure2 = (OrganizationStructure) iterator2.next();
+                if (organizationStructure2.getProfession()!=null && organizationStructure2.getList()!=null) {
+                    System.out.println("22222222222222"+ organizationStructure2);
+                    organizationStructure2.getList().sort(new ProfessionSorter());
+                }
+            }
+            }
+        }
+        return structure;
+    }
 }

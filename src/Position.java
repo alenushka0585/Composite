@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Position extends OrganizationStructure{
     private String name;
     private String profession;
@@ -25,7 +27,18 @@ public class Position extends OrganizationStructure{
     }
 
     @Override
+    public List<OrganizationStructure> getList() {
+        return null;
+    }
+
+    @Override
     public void print() {
         System.out.println(" " + getName() +", " + getProfession() + ", " + getSalary());
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
 }
