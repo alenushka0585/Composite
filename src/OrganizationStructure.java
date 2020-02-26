@@ -1,6 +1,9 @@
 import java.util.List;
 
 public abstract class OrganizationStructure {
+    String name;
+    Integer salary;
+    String profession;
     public void add(OrganizationStructure organizationStructure){
         throw new UnsupportedOperationException();
     }
@@ -10,15 +13,15 @@ public abstract class OrganizationStructure {
     }
 
     public String getName(){
-        throw new UnsupportedOperationException();
+        return name;
     }
 
     public String getProfession(){
-        return null;
+        return profession;
     }
 
     public Integer getSalary(){
-        throw new UnsupportedOperationException();
+        return salary;
     }
 
     public void print(){
@@ -34,6 +37,9 @@ public abstract class OrganizationStructure {
     }
 
     public List <OrganizationStructure> sortByProfession(){
+        throw new UnsupportedOperationException();
+    }
+    public List <OrganizationStructure> sortBySalary(){
         throw new UnsupportedOperationException();
     }
 }
